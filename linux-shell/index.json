@@ -5,7 +5,9 @@
   "time": "15 minutes",
   "details": {
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "foreground": "scripts/greetings.sh",
+      "background": "scripts/non-root.sh"
     },
     "steps": [
       {
