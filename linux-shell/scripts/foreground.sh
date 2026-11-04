@@ -4,4 +4,5 @@ while [ ! -f /tmp/background-script.txt ]; do
     sleep 1;
 done
 sudo su lance
+cd ~
 clear
