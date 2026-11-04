@@ -1,14 +1,16 @@
-# Step 01: Understanding the Shell Environment
+# Step 01: Who Am I, and Where Am I?
 
-Before working with Linux commands, we need to understand the environment we're interacting with.
+## Objective
 
-The shell is a command-line interface that allows us to communicate with the operating system. Through it, we can execute commands, inspect our environment, and manage system resources.
+Before working with a Linux system, we need to understand our current environment.
 
-In this scenario, we'll identify the current user, inspect our working directory, and examine important environment information.
+In this scenario, we'll identify the user account we're operating under, determine our current working directory, and locate our home directory.
 
-## Our Tasks
+## Tasks
 
-**1. Identify the current user**
+### 1. Identify the current user
+
+Let's find out which Linux user account we're currently using.
 
 Run:
 
@@ -16,9 +18,13 @@ Run:
 whoami
 ```
 
-This displays the username of the account currently running the shell.
+The command displays the username associated with our current session.
 
-**2. Identify our current working directory**
+**Think about it:** Are we operating as `root` or as a regular user?
+
+### 2. Identify our current location
+
+Next, let's determine which directory we're currently working in.
 
 Run:
 
@@ -26,9 +32,16 @@ Run:
 pwd
 ```
 
-This displays the absolute path of our current directory.
+The command displays the absolute path of our current working directory.
 
-**3. Inspect our home directory**
+For example:
+
+- `/root` means we're currently inside the root user's home directory.
+- `/home/engineer` means we're inside a regular user's home directory.
+
+### 3. Locate our home directory
+
+Every Linux user has a home directory. We can access its location through the `HOME` environment variable.
 
 Run:
 
@@ -36,36 +49,17 @@ Run:
 echo "$HOME"
 ```
 
-The `HOME` environment variable contains the path to our user's home directory.
+The command displays the value stored in the `HOME` variable.
 
-**4. Inspect our configured login shell**
+Compare this result with the output of `pwd`.
 
-Run:
+Are they the same?
 
-```bash
-echo "$SHELL"
-```
+## Key Takeaways
 
-This displays the shell configured for our user account. It does not necessarily identify the shell process currently running.
+- `whoami` identifies the current user.
+- `pwd` displays our current working directory.
+- `echo "$HOME"` displays the location of our home directory.
+- Our current working directory and home directory are not necessarily the same.
 
-**5. Identify the current shell process**
-
-Run:
-
-```bash
-ps -p $$ -o comm=
-```
-
-This displays the command name of the current shell process.
-
-## What We Should Understand
-
-After completing these commands, we should be able to distinguish between:
-
-- **Current user:** The account executing our commands.
-- **Working directory:** The directory in which our shell is currently operating.
-- **Home directory:** Our user's default personal directory.
-- **Configured login shell:** The shell assigned to our user account.
-- **Current shell process:** The shell process currently executing our commands.
-
-We will use these concepts throughout the remaining scenarios.
+We now have a basic understanding of our Linux session and the environment we're operating in.

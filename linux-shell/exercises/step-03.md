@@ -1,83 +1,33 @@
-# Step 03: Navigating the Filesystem
+# Step 03: How Do I Move Around the Filesystem?
 
 ## Objective
 
-In this scenario, we'll practice moving between directories using absolute paths, relative paths, and directory shortcuts.
+Learn how to move between directories using relative paths and the parent directory shortcut.
 
 ## Tasks
 
-### 1. Inspect our current location
+### 1. Enter the workspace
 
-Start by checking the current working directory:
-
-```bash
-pwd
-```
-
-List its contents:
-
-```bash
-ls
-```
-
-### 2. Navigate to the root directory
-
-Use an absolute path to move to the root of the Linux filesystem:
-
-```bash
-cd /
-```
-
-Check your location:
-
-```bash
-pwd
-```
-
-The output should be `/`.
-
-### 3. Explore the root directory
-
-List the directories and files available at the root:
-
-```bash
-ls
-```
-
-Look for familiar directories such as `home`, `etc`, `tmp`, and `var`.
-
-### 4. Navigate using an absolute path
-
-Move directly to the working directory created in the previous scenario:
-
-```bash
-cd ~/shell-practice
-```
-
-Check your location:
-
-```bash
-pwd
-```
-
-### 5. Navigate using relative paths
-
-Move one directory up:
-
-```bash
-cd ..
-```
-
-Check your location:
-
-```bash
-pwd
-```
-
-Return to our working directory using a relative path:
+From your home directory, navigate into the workspace created in the previous step:
 
 ```bash
 cd shell-practice
+```
+
+Check your current location:
+
+```bash
+pwd
+```
+
+We should now be inside `shell-practice`.
+
+### 2. Move to the parent directory
+
+Use `..` to move one directory level up:
+
+```bash
+cd ..
 ```
 
 Check your location again:
@@ -86,25 +36,38 @@ Check your location again:
 pwd
 ```
 
-### 6. Use the previous-directory shortcut
+We should now be back in our home directory.
 
-Move to the previous directory:
+### 3. Return to the workspace
+
+Navigate back into the workspace using its relative path:
 
 ```bash
-cd -
+cd shell-practice
 ```
 
-Run the command again:
+List its contents:
 
 ```bash
-cd -
+ls
 ```
 
-Observe how the shell switches between the two directories.
+The directory may be empty. That is expected because we have not created any files yet.
 
-### 7. Prepare for verification
+## Key Takeaways
 
-Save the commands from our current Bash session into the history file:
+- `cd` changes the current working directory.
+- A relative path starts from our current directory.
+- `..` refers to the parent directory.
+- `pwd` displays our current location.
+- `ls` lists the contents of a directory.
 
-```bash
-history -a
+## Commands Introduced
+
+| Command | Purpose |
+|---|---|
+| `cd` | Change directories |
+| `cd ..` | Move to the parent directory |
+| `pwd` | Display the current working directory |
+| `ls` | List directory contents |
+

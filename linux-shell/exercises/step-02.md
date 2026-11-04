@@ -1,43 +1,21 @@
-# Step 02: Exploring the Home Directory
+# Step 02: Where Should I Create My Workspace?
 
 ## Objective
 
-In this scenario, we'll explore our home directory and practice navigating to it. We'll also create a working directory that we'll use in the following exercises.
+When working with Linux, we often need a dedicated directory to organize our files and activities.
+
+In this scenario, we'll navigate to our home directory, create a workspace named `shell-practice`, and inspect its contents.
 
 ## Tasks
 
-### 1. Navigate to the home directory
+### 1. Navigate to our home directory
 
-Use the `cd` command with the `~` shortcut to move to your home directory.
+Linux provides the `~` shortcut to represent the current user's home directory.
+
+Run:
 
 ```bash
 cd ~
-```
-
-Display your current working directory:
-
-```bash
-pwd
-```
-
-The output should show the absolute path of your home directory.
-
-### 2. Create a working directory
-
-We'll create a directory named `shell-practice` inside our home directory.
-
-```bash
-mkdir -p shell-practice
-```
-
-The `mkdir` command creates directories. The `-p` option prevents an error if the directory already exists.
-
-### 3. Navigate into the working directory
-
-Move into the directory we just created:
-
-```bash
-cd ~/shell-practice
 ```
 
 Check our current location:
@@ -46,25 +24,44 @@ Check our current location:
 pwd
 ```
 
-### 4. Inspect the directory
+We should now be inside our home directory.
 
-Use `ls` to list the contents of the current directory:
+### 2. Create our workspace
+
+Let's create a directory named `shell-practice`.
+
+Run:
+
+```bash
+mkdir shell-practice
+```
+
+The `mkdir` command creates a new directory in our current location.
+
+### 3. Inspect our workspace
+
+Use `ls` to list the contents of our home directory:
+
+```bash
+ls
+```
+
+Look for the `shell-practice` directory in the output.
+
+We can also display more information using:
 
 ```bash
 ls -la
 ```
 
-The directory may be empty. That is expected.
+This provides a detailed listing, including hidden entries, permissions, ownership, and timestamps.
 
-## Completion Check
+## Key Takeaways
 
-Run the verification script when you have completed the tasks.
+- `cd` changes our current working directory.
+- `~` represents the current user's home directory.
+- `mkdir` creates a new directory.
+- `ls` displays directory contents.
+- `ls -la` provides a detailed directory listing.
 
-The check confirms that `shell-practice` exists inside your home directory and is owned by your current user.
-
-### 5. Prepare for verification
-
-Save the commands from our current Bash session into the history file:
-
-```bash
-history -a
+Our `shell-practice` directory will serve as our workspace for the next exercise.

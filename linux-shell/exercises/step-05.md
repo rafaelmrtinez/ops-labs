@@ -1,8 +1,8 @@
-# Step 05: Understanding Command Types
+# Step 05: How Does the Shell Interpret Commands?
 
 ## Objective
 
-In this final scenario, we'll learn how the shell identifies commands. Some commands are built directly into the shell, while others are separate executable programs available on the filesystem.
+Understand how the shell identifies commands and distinguishes between shell built-ins, executable programs, and aliases.
 
 ## Tasks
 
@@ -14,17 +14,11 @@ Run:
 type cd
 ```
 
-The output should identify `cd` as a shell built-in.
+The output should indicate that `cd` is a shell built-in.
 
-Now inspect another command:
+A shell built-in is a command implemented directly by the shell. It does not need to launch a separate executable program.
 
-```bash
-type echo
-```
-
-In Bash, `echo` is also a shell built-in.
-
-### 2. Identify external commands
+### 2. Identify an executable program
 
 Run:
 
@@ -32,69 +26,46 @@ Run:
 type ls
 ```
 
-Then:
+The output should show the location of the `ls` executable, or indicate that it is an alias or another command definition.
+
+Unlike `cd`, `ls` is normally an external program that the shell locates through the directories listed in the `PATH` environment variable.
+
+**NOTE:** Alias is commonly used when we want to shorten a lengthly command. We can also create our own.
 
 ```bash
-type date
+# Try this!
+alias utime='uptime'
+
+# Execute this separately after the alias.
+utime
+
+# Example output
+ 14:34:56 up 25 min,  0 user,  load average: 0.03, 0.09, 0.09
 ```
 
-These commands are typically external executables on Ubuntu. The output should show their executable paths.
+### 3. Inspect another command
 
-### 3. Display only the command type
-
-Use the `-t` option to display the command type:
+Run:
 
 ```bash
-type -t cd
+type echo
 ```
 
-Expected output:
+Observe how the shell identifies `echo`. Depending on the shell environment, it may be recognized as a shell built-in.
 
-```text
-builtin
-```
+Compare the results of all three commands.
 
-Check another built-in:
+## Key Takeaways
 
-```bash
-type -t echo
-```
+- The shell interprets commands before executing them.
+- `type` identifies how the current shell recognizes a command.
+- Shell built-ins are implemented directly by the shell.
+- External commands are separate executable programs.
+- Aliases can provide alternative names or definitions for commands.
 
-Now check an external command:
+## Commands Introduced
 
-```bash
-type -t ls
-```
+| Command | Purpose |
+|---|---|
+| `type` | Identify how the shell interprets a command |
 
-Expected output:
-
-```text
-file
-```
-
-### 4. Compare command types
-
-Run the following commands:
-
-```bash
-type -t pwd
-type -t mkdir
-type -t uptime
-type -t date
-```
-
-Observe which commands are built-ins and which are external executables.
-
-### 5. Prepare for verification
-
-Save the commands from our current Bash session into the history file:
-
-```bash
-history -a
-
-## Key Concepts
-
-- **Shell built-in:** A command implemented directly by the shell, such as `cd` and `echo`.
-- **External command:** A separate executable program that the shell locates and runs, such as `ls` and `date`.
-- **`type`:** A shell command that identifies how a command name is interpreted.
-- **`type -t`:** Displays a short classification, such as `builtin` or `file`.

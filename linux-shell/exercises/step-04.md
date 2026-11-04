@@ -1,70 +1,51 @@
-# Step 04: Working with Basic Commands
+# Step 04: How Do I Inspect Basic System Information?
 
 ## Objective
 
-In this scenario, we'll practice executing basic Linux commands and understand how arguments and options affect their behavior.
+Learn how to inspect the system's current date and time and check how long the machine has been running.
 
 ## Tasks
 
-### 1. Display a message using `echo`
-
-The `echo` command displays text in the terminal.
+### 1. Check the system date and time
 
 Run:
 
 ```bash
-echo "Hello, Engineers!"
+date
 ```
 
-Try another message:
+Observe the displayed date, time, and timezone.
 
-```bash
-echo "We are learning Linux commands."
-```
+This is useful when checking timestamps, investigating issues, or coordinating activities across systems.
 
-Observe how the text appears in the terminal.
+### 2. Check system uptime
 
-### 2. Use multiple arguments
-
-Pass multiple words to `echo`:
-
-```bash
-echo Linux Shell Practice
-```
-
-Notice that the command displays the supplied arguments as text.
-
-### 3. Inspect system uptime
-
-Run the `uptime` command:
+Run:
 
 ```bash
 uptime
 ```
 
-The output provides information about how long the system has been running, the number of logged-in users, and the system load averages.
+Observe the information displayed:
 
-### 4. Use a command option
+- **Current time:** The system's current time.
+- **Uptime:** How long the system has been running.
+- **Users:** Number of users currently logged in.
+- **Load average:** Average system load over the last 1, 5, and 15 minutes.
 
-Run:
+A system's uptime helps us determine whether it has recently restarted or has been running continuously.
 
-```bash
-uptime -p
-```
+## Key Takeaways
 
-The `-p` option displays uptime in a more readable format.
+- `date` displays the system's current date and time.
+- `uptime` displays how long the system has been running.
+- Load averages provide an overview of system activity over time.
+- Basic system information helps us understand the environment before troubleshooting.
 
-Compare the output with the previous `uptime` command.
+## Commands Introduced
 
-## Key Concepts
+| Command | Purpose |
+|---|---|
+| `date` | Display the system date and time |
+| `uptime` | Display system uptime and load averages |
 
-- **Command:** The program or shell instruction we execute, such as `echo` or `uptime`.
-- **Argument:** Additional information supplied to a command, such as the message passed to `echo`.
-- **Option:** A setting that changes how a command behaves, such as `-p` in `uptime -p`.
-
-### 5. Prepare for verification
-
-Save the commands from our current Bash session into the history file:
-
-```bash
-history -a
