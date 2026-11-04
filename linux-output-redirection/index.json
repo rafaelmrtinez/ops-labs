@@ -1,0 +1,21 @@
+{
+  "title": "Linux Output Redirection",
+  "description": "Learning basic linux commands for output redirection",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Redirecting Output to a File",
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
