@@ -7,8 +7,33 @@
     },
     "steps": [
       {
-        "title": "Redirecting Output to a File",
+        "title": "Challenge Difficulty",
         "text": "step1.md"
+      },
+      {
+        "title": "Level 1 – Saving Command Output",
+        "text": "step2.md",
+        "verify": "verify/verify-step-02.sh"
+      },
+      {
+        "title": "Level 2 – Appending Information",
+        "text": "step3.md",
+        "verify": "verify/verify-step-03.sh"
+      },
+      {
+        "title": "Level 3 – Capturing Errors",
+        "text": "step4.md",
+        "verify": "verify/verify-step-04.sh"
+      },
+      {
+        "title": "Level 4 – Combining Output Streams",
+        "text": "step5.md",
+        "verify": "verify/verify-step-05.sh"
+      },
+      {
+        "title": "Level 5 – Troubleshooting and Log Management",
+        "text": "step6.md",
+        "verify": "verify/verify-step-06.sh"
       }
     ],
     "finish": {

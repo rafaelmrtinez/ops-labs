@@ -1,11 +1,15 @@
-Learning Linux can never be easy!
+This challenge puts our Linux output redirection knowledge into practice. We'll work through five scenarios, each designed to test our understanding of how Linux handles command output and errors.
 
-However, we must start somewhere to get us going!
+## Challenge Difficulty
 
-In this excercise you will be performing output redirection! 
+This exercise consists of **5 levels of difficulty**, progressing from basic file redirection to more advanced troubleshooting and log management.
 
-I will lay the commands and you can either copy or do it by hand. I would recommend to do it by hand since
-you need to have a muscle memory on doing it.
+| Level | Difficulty | Focus |
+|---|---|---|
+| 1 | Basic | Saving command output |
+| 2 | Basic | Appending information |
+| 3 | Moderate | Capturing errors |
+| 4 | Moderate | Combining output streams |
+| 5 | Hard | Troubleshooting and log management |
 
-When you keep doing it by hand, it becomes a second nature. You won't even have to think about it!
-
+Each level builds on the previous one. Take your time, understand the situation, and figure out which redirection techniques best solve the problem.
