@@ -2,4 +2,4 @@
 
 sudo useradd -m -s /bin/bash lance
 
-sudo su lance
+echo 'done' > /tmp/background-script.txt
