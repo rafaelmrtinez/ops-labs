@@ -10,28 +10,23 @@
     "steps": [
       {
         "title": "Understanding the Shell Environment",
-        "text": "exercises/step-01.md",
-        "verify": "verification/step-01.sh"
+        "text": "exercises/step-01.md"
       },
       {
         "title": "Exploring the Home Directory",
-        "text": "exercises/step-02.md",
-        "verify": "verification/step-02.sh"
+        "text": "exercises/step-02.md"
       },
       {
         "title": "Navigating the Filesystem",
-        "text": "exercises/step-03.md",
-        "verify": "verification/step-03.sh"
+        "text": "exercises/step-03.md"
       },
       {
         "title": "Working with Basic Commands",
-        "text": "exercises/step-04.md",
-        "verify": "verification/step-04.sh"
+        "text": "exercises/step-04.md"
       },
       {
         "title": "Understanding Command Types",
-        "text": "exercises/step-05.md",
-        "verify": "verification/step-05.sh"
+        "text": "exercises/step-05.md"
       }
     ],
     "finish": {
