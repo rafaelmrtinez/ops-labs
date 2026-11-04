@@ -102,8 +102,9 @@ cd -
 
 Observe how the shell switches between the two directories.
 
-## Completion Check
+### 7. Prepare for verification
 
-Run the verification script after completing the tasks.
+Save the commands from our current Bash session into the history file:
 
-The verification checks that the working directory from Step 02 still exists and that the filesystem locations used in this scenario are available.
+```bash
+history -a

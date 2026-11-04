@@ -2,12 +2,43 @@
 
 set -eu
 
-echo "Checking command classifications..."
+HISTORY_FILE="${HOME}/.bash_history"
+
+echo "Checking Step 05 command execution..."
+
+if [[ ! -f "$HISTORY_FILE" ]]; then
+    echo "Verification failed: Bash history file not found."
+    echo "Run 'history -a' in your interactive terminal and try again."
+    exit 1
+fi
 
 if [[ -z "${BASH_VERSION:-}" ]]; then
     echo "Verification failed: this verification requires Bash."
     exit 1
 fi
+
+check_history() {
+    local pattern="$1"
+    local description="$2"
+
+    if ! grep -Eq "$pattern" "$HISTORY_FILE"; then
+        echo "Verification failed: missing command: $description"
+        exit 1
+    fi
+
+    echo "Passed: $description"
+}
+
+check_history '^[[:space:]]*type[[:space:]]+cd[[:space:]]*$' "type cd"
+check_history '^[[:space:]]*type[[:space:]]+echo[[:space:]]*$' "type echo"
+check_history '^[[:space:]]*type[[:space:]]+ls[[:space:]]*$' "type ls"
+check_history '^[[:space:]]*type[[:space:]]+date[[:space:]]*$' "type date"
+
+check_history '^[[:space:]]*type[[:space:]]+-t[[:space:]]+cd[[:space:]]*$' "type -t cd"
+check_history '^[[:space:]]*type[[:space:]]+-t[[:space:]]+echo[[:space:]]*$' "type -t echo"
+check_history '^[[:space:]]*type[[:space:]]+-t[[:space:]]+ls[[:space:]]*$' "type -t ls"
+
+echo "Checking command classifications..."
 
 check_command_type() {
     local command_name="$1"
@@ -28,8 +59,6 @@ check_command_type cd builtin
 check_command_type echo builtin
 check_command_type ls file
 check_command_type date file
-check_command_type mkdir file
-check_command_type uptime file
 
-echo "Verification passed: all expected command classifications are correct."
+echo "Verification passed: required commands were found and classifications are correct."
 echo "Step 05 completed successfully."

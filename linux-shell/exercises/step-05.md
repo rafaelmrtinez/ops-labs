@@ -85,15 +85,16 @@ type -t date
 
 Observe which commands are built-ins and which are external executables.
 
+### 5. Prepare for verification
+
+Save the commands from our current Bash session into the history file:
+
+```bash
+history -a
+
 ## Key Concepts
 
 - **Shell built-in:** A command implemented directly by the shell, such as `cd` and `echo`.
 - **External command:** A separate executable program that the shell locates and runs, such as `ls` and `date`.
 - **`type`:** A shell command that identifies how a command name is interpreted.
 - **`type -t`:** Displays a short classification, such as `builtin` or `file`.
-
-## Completion Check
-
-Run the verification script after completing the tasks.
-
-The script checks the expected command classifications in our Bash environment.

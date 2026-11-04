@@ -61,3 +61,10 @@ The directory may be empty. That is expected.
 Run the verification script when you have completed the tasks.
 
 The check confirms that `shell-practice` exists inside your home directory and is owned by your current user.
+
+### 5. Prepare for verification
+
+Save the commands from our current Bash session into the history file:
+
+```bash
+history -a

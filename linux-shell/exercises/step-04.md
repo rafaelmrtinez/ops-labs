@@ -62,8 +62,9 @@ Compare the output with the previous `uptime` command.
 - **Argument:** Additional information supplied to a command, such as the message passed to `echo`.
 - **Option:** A setting that changes how a command behaves, such as `-p` in `uptime -p`.
 
-## Completion Check
+### 5. Prepare for verification
 
-Run the verification script after completing the tasks.
+Save the commands from our current Bash session into the history file:
 
-The script checks whether the required commands are available in our environment.
+```bash
+history -a
