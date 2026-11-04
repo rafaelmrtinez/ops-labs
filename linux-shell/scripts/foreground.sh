@@ -7,5 +7,3 @@ done
 sudo su lance
 
 clear
-
-echo "Hello $(whoami)"
