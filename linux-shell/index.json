@@ -6,8 +6,8 @@
   "details": {
     "intro": {
       "text": "intro.md",
-      "foreground": "scripts/greetings.sh",
-      "background": "scripts/non-root.sh"
+      "foreground": "scripts/foreground.sh",
+      "background": "scripts/background.sh"
     },
     "steps": [
       {
