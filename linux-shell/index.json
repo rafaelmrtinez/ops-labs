@@ -1,0 +1,44 @@
+{
+  "title": "The Linux Shell",
+  "description": "Explore the Linux shell and practice essential commands for understanding the environment, navigating the filesystem, and working with basic commands.",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Understanding the Shell Environment",
+        "text": "exercises/step-01.md",
+        "verify": "verification/step-01.sh"
+      },
+      {
+        "title": "Exploring the Home Directory",
+        "text": "exercises/step-02.md",
+        "verify": "verification/step-02.sh"
+      },
+      {
+        "title": "Navigating the Filesystem",
+        "text": "exercises/step-03.md",
+        "verify": "verification/step-03.sh"
+      },
+      {
+        "title": "Working with Basic Commands",
+        "text": "exercises/step-04.md",
+        "verify": "verification/step-04.sh"
+      },
+      {
+        "title": "Understanding Command Types",
+        "text": "exercises/step-05.md",
+        "verify": "verification/step-05.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
